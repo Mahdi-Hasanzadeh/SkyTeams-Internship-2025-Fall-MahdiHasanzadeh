@@ -18,6 +18,14 @@ import { describe, expect, it } from "vitest";
 import { triangleAreaAndPerimeter } from "./question-3.js";
 
 describe("triangleAreaAndPerimeter method", () => {
+  it("should return (provide number only) if value is not a number", () => {
+    expect(triangleAreaAndPerimeter("ld", 2)).toBe("provide number only");
+  });
+
+  it("should return (provide number only) if value is not a number", () => {
+    expect(triangleAreaAndPerimeter(2, "ld")).toBe("provide number only");
+  });
+
   it("should return (Invalid widht/height) if height or width are less than or equal to zero", () => {
     expect(triangleAreaAndPerimeter(0, 4)).toBe("Invalid widht/height");
   });

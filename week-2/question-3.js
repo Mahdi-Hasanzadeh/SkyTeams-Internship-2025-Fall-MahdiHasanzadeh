@@ -12,7 +12,11 @@
 
  */
 
+import { isNumber } from "./utility.js";
+
 export function triangleAreaAndPerimeter(width, height) {
+  if (!isNumber(width) || !isNumber(height)) return "provide number only";
+
   if (width <= 0 || height <= 0) {
     return "Invalid widht/height";
   }
