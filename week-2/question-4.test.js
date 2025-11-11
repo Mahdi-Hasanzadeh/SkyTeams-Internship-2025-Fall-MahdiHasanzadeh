@@ -26,6 +26,22 @@ import {
 } from "./question-4.js";
 
 describe("Fahrenheit To Celsius and vice versa", () => {
+  it("should return (Not a number) if value is not a number", () => {
+    expect(fahrenheitToCelsius("d2d")).toBe("Not a number");
+  });
+
+  it("should return (Not a number) if value is not a number", () => {
+    expect(celsiusToFahrenheit("d2d")).toBe("Not a number");
+  });
+
+  it("should return (Not a number) if value is not a number", () => {
+    expect(fahrenheitToCelsiusPrecision("d2d")).toBe("Not a number");
+  });
+
+  it("should return (Not a number) if value is not a number", () => {
+    expect(celsiusToFahrenheitPrecision("d2d")).toBe("Not a number");
+  });
+
   it("should return the temprature in celsius", () => {
     expect(fahrenheitToCelsius(77)).toBe(`C = ${25}`);
   });
