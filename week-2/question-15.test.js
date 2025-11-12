@@ -17,7 +17,7 @@
  */
 
 import { describe, expect, it } from "vitest";
-import { getTriangleValidityAndType } from "./question-15";
+import { getTriangleValidityAndType } from "./question-15.js";
 
 describe("Triangle validity and type", () => {
   it("should return (sides should be number)", () => {
