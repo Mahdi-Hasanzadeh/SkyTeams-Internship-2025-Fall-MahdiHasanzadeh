@@ -32,7 +32,5 @@ export function MinMax(list) {
     }
   }
 
-  return `Largest: ${maximum}, Smallets: ${minimum}`;
+  return [minimum, maximum];
 }
-
-console.log(MinMax([3, 5, 9]));

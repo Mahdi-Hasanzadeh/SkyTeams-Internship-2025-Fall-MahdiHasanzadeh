@@ -19,8 +19,9 @@ import { MinMax } from "./question-2.js";
 
 describe("MinMax method", () => {
   it("should find the largest and smallets numbers", () => {
-    expect(MinMax([2, 9, 5])).toBe(`Largest: ${9}, Smallets: ${2}`);
-    expect(MinMax([4, 12, 0])).toBe(`Largest: ${12}, Smallets: ${0}`);
+    expect(MinMax([2, 9, 5])).toStrictEqual([2, 9]);
+    expect(MinMax([4, 12, 0])).toStrictEqual([0, 12]);
+    expect(MinMax([-2, 10, -5])).toStrictEqual([-5, 10]);
   });
 
   it("should return (List is empty) if the list lenght is zero", () => {
