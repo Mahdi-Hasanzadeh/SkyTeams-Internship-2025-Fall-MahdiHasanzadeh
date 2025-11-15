@@ -21,28 +21,24 @@ import { isPrime } from "./question-10";
 
 describe("prime numbers", () => {
   it("should throw error", () => {
-    expect(() => {
-      isPrime("a");
-    }).toThrowError(Error, "provide number only");
+    let errors = ["a", {}, []];
 
-    expect(() => {
-      isPrime({});
-    }).toThrowError(Error, "provide number only");
-
-    expect(() => {
-      isPrime([]);
-    }).toThrowError(Error, "provide number only");
+    errors.forEach((item) => {
+      expect(() => {
+        isPrime(item);
+      }).toThrowError(Error, "provide number only");
+    });
   });
 
   it("should return correct result", () => {
-    expect(isPrime(0)).toBe(false);
-    expect(isPrime(1)).toBe(false);
-    expect(isPrime(2)).toBe(true);
-    expect(isPrime(3)).toBe(true);
-    expect(isPrime(4)).toBe(false);
-    expect(isPrime(17)).toBe(true);
-    expect(isPrime(97)).toBe(true);
-    expect(isPrime(11)).toBe(true);
-    expect(isPrime(31)).toBe(true);
+    let primes = [2, 3, 17, 97, 11, 31];
+    primes.forEach((item) => {
+      expect(isPrime(item)).toBe(true);
+    });
+
+    let nonPrimes = [0, 1, 4];
+    nonPrimes.forEach((item) => {
+      expect(isPrime(item)).toBe(false);
+    });
   });
 });
