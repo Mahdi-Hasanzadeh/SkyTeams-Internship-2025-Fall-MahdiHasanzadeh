@@ -27,5 +27,3 @@ export function getEvenNumbers(start, end) {
 
   return evenNumbers.join(", ");
 }
-
-console.log(getEvenNumbers(1, 10));
