@@ -14,6 +14,7 @@
 
 import { isNumber } from "./utility.js";
 
+// take width and height and return area and perimeter as an array => [area,perimeter]
 export function triangleAreaAndPerimeter(width, height) {
   if (!isNumber(width) || !isNumber(height)) return "provide number only";
 
@@ -24,7 +25,5 @@ export function triangleAreaAndPerimeter(width, height) {
   let area = width * height;
   let perimeter = width * 2 + height * 2;
 
-  return `Area: ${area}, Perimeter: ${perimeter}`;
+  return [area, perimeter];
 }
-
-console.log(triangleAreaAndPerimeter(6, 4));

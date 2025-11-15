@@ -35,8 +35,10 @@ describe("triangleAreaAndPerimeter method", () => {
   });
 
   it("should return area and perimeter of a triangle", () => {
-    expect(triangleAreaAndPerimeter(6, 4)).toBe(
-      `Area: ${24}, Perimeter: ${20}`
-    );
+    expect(triangleAreaAndPerimeter(6, 4)).toStrictEqual([24, 20]);
+  });
+
+  it("should return area and perimeter of a triangle", () => {
+    expect(triangleAreaAndPerimeter(10, 15)).toStrictEqual([150, 50]);
   });
 });
