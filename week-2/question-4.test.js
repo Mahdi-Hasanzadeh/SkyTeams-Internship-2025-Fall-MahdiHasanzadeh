@@ -43,19 +43,19 @@ describe("Fahrenheit To Celsius and vice versa", () => {
   });
 
   it("should return the temprature in celsius", () => {
-    expect(fahrenheitToCelsius(77)).toBe(`C = ${25}`);
+    expect(fahrenheitToCelsius(77)).toBe(25);
   });
 
   it("should return the temprature in celcius", () => {
-    expect(fahrenheitToCelsius(0)).toStrictEqual(`C = ${-17.77777777777778}`);
+    expect(fahrenheitToCelsius(0)).toStrictEqual(-17.77777777777778);
   });
 
   it("should return the temprature in fahrenheit", () => {
-    expect(celsiusToFahrenheit(25)).toBe(`F = ${77}`);
+    expect(celsiusToFahrenheit(25)).toBe(77);
   });
 
   it("should return the temprature in fahrenheit", () => {
-    expect(celsiusToFahrenheit(0)).toBe(`F = ${32}`);
+    expect(celsiusToFahrenheit(0)).toBe(32);
   });
 
   it("should return the temprature in fahrenheith with precision", () => {

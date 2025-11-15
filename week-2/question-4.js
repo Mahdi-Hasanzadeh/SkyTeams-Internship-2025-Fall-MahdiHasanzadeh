@@ -22,7 +22,7 @@ export function fahrenheitToCelsius(Fahrenheit) {
 
   let celsius = (Fahrenheit - 32) * (5 / 9);
 
-  return `C = ${celsius}`;
+  return celsius;
 }
 
 export function celsiusToFahrenheit(celsius) {
@@ -30,7 +30,7 @@ export function celsiusToFahrenheit(celsius) {
 
   let fahrenheit = celsius * (9 / 5) + 32;
 
-  return `F = ${fahrenheit}`;
+  return fahrenheit;
 }
 
 export function fahrenheitToCelsiusPrecision(Fahrenheit) {
