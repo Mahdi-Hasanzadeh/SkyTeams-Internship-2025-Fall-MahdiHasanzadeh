@@ -31,5 +31,5 @@ export function fibonacciSeries(n) {
     }
   }
 
-  return fibonacciList.join(", ");
+  return fibonacciList;
 }

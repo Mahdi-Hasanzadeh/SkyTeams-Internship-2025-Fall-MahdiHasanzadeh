@@ -25,12 +25,12 @@ describe("Fibonacci series up to N terms", () => {
   });
 
   it("should return correct result", () => {
-    expect(fibonacciSeries(7)).toBe("0, 1, 1, 2, 3, 5, 8");
+    expect(fibonacciSeries(7)).toStrictEqual([0, 1, 1, 2, 3, 5, 8]);
 
-    expect(fibonacciSeries(0)).toBe("");
+    expect(fibonacciSeries(0)).toStrictEqual([]);
 
-    expect(fibonacciSeries(1)).toBe("0");
+    expect(fibonacciSeries(1)).toStrictEqual([0]);
 
-    expect(fibonacciSeries(4)).toBe("0, 1, 1, 2");
+    expect(fibonacciSeries(4)).toStrictEqual([0, 1, 1, 2]);
   });
 });
