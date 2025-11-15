@@ -31,10 +31,10 @@ describe("Print even numbers in a range", () => {
   });
 
   it("should return correct result", () => {
-    expect(getEvenNumbers(1, 10)).toBe("2, 4, 6, 8, 10");
+    expect(getEvenNumbers(1, 10)).toStrictEqual([2, 4, 6, 8, 10]);
   });
 
   it("should return correct result", () => {
-    expect(getEvenNumbers(5, 10)).toBe("6, 8, 10");
+    expect(getEvenNumbers(5, 10)).toStrictEqual([6, 8, 10]);
   });
 });

@@ -25,5 +25,5 @@ export function getEvenNumbers(start, end) {
     }
   }
 
-  return evenNumbers.join(", ");
+  return evenNumbers;
 }
