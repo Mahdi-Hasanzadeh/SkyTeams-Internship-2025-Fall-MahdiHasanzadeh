@@ -35,8 +35,12 @@ describe("Simple & Compound Interest", () => {
   });
 
   it("should return Simple and Compound Interest", () => {
-    expect(calculateSimpleAndCompoundInterest(1000, 5, 2)).toBe(
-      `SI = ${100}, CI = ${102.5}`
-    );
+    expect(calculateSimpleAndCompoundInterest(1000, 5, 2)).toStrictEqual([
+      100, 102.5,
+    ]);
+
+    expect(calculateSimpleAndCompoundInterest(3000, 0.5, 2)).toStrictEqual([
+      30, 30.07,
+    ]);
   });
 });

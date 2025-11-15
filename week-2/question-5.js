@@ -16,17 +16,18 @@
 
 import { isNumber, round } from "./utility.js";
 
+// take the principal,rate and time and return the result as an array => [simpleInterest,compoundInterest]
 export function calculateSimpleAndCompoundInterest(principal, rate, time) {
   if (!isNumber(principal) || !isNumber(rate) || !isNumber(time))
     return "provide number only";
 
-  let simpleInerest = (principal * rate * time) / 100;
+  let simpleInterest = (principal * rate * time) / 100;
 
-  simpleInerest = round(simpleInerest);
+  simpleInterest = round(simpleInterest);
 
   let compoundInterest = principal * ((1 + rate / 100) ** 2 - 1);
 
   compoundInterest = round(compoundInterest);
 
-  return `SI = ${simpleInerest}, CI = ${compoundInterest}`;
+  return [simpleInterest, compoundInterest];
 }
