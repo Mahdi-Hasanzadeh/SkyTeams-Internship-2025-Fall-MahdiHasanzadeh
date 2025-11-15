@@ -1,0 +1,72 @@
+/**
+ * Author: Mahdi Hasanzadeh
+
+ * Date: 2025-11-11
+
+ * Test: Write test for FahrenheitToCelsius & CelsiusToFahrenheit functions
+
+ * Question: Temperature converter (Celsius ↔ Fahrenheit)
+
+ * Description: Convert temperature from Celsius to Fahrenheit and vice versa.
+    Formula:
+    F = (C × 9/5) + 32
+    C = (F - 32) × 5/9
+    Example:
+    Input: C = 25
+    Output:F = 77
+
+ */
+
+import { describe, expect, it } from "vitest";
+import {
+  fahrenheitToCelsius,
+  celsiusToFahrenheit,
+  fahrenheitToCelsiusPrecision,
+  celsiusToFahrenheitPrecision,
+} from "./question-4.js";
+
+describe("Fahrenheit To Celsius and vice versa", () => {
+  it("should return (Not a number) if value is not a number", () => {
+    expect(fahrenheitToCelsius("d2d")).toBe("Not a number");
+  });
+
+  it("should return (Not a number) if value is not a number", () => {
+    expect(celsiusToFahrenheit("d2d")).toBe("Not a number");
+  });
+
+  it("should return (Not a number) if value is not a number", () => {
+    expect(fahrenheitToCelsiusPrecision("d2d")).toBe("Not a number");
+  });
+
+  it("should return (Not a number) if value is not a number", () => {
+    expect(celsiusToFahrenheitPrecision("d2d")).toBe("Not a number");
+  });
+
+  it("should return the temprature in celsius", () => {
+    expect(fahrenheitToCelsius(77)).toBe(25);
+  });
+
+  it("should return the temprature in celcius", () => {
+    expect(fahrenheitToCelsius(0)).toStrictEqual(-17.77777777777778);
+  });
+
+  it("should return the temprature in fahrenheit", () => {
+    expect(celsiusToFahrenheit(25)).toBe(77);
+  });
+
+  it("should return the temprature in fahrenheit", () => {
+    expect(celsiusToFahrenheit(0)).toBe(32);
+  });
+
+  it("should return the temprature in fahrenheith with precision", () => {
+    expect(fahrenheitToCelsiusPrecision(0)).toBe(-17.78);
+  });
+
+  it("should return the temprature in celsius with precision", () => {
+    expect(celsiusToFahrenheitPrecision(0)).toBe(32);
+  });
+
+  it("should return the temprature in celsius with precision", () => {
+    expect(celsiusToFahrenheitPrecision(-39)).toBe(-38.2);
+  });
+});
