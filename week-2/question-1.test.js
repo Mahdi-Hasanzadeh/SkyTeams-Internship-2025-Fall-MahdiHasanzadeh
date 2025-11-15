@@ -19,8 +19,8 @@ import { swapTwoVariables } from "./question-1";
 
 describe("Swap two variables", () => {
   it("should return correct result", () => {
-    let a = 10;
-    let b = 5;
-    expect(swapTwoVariables(5, 10)).toBe(`a = ${a}, b = ${b}`);
+    expect(swapTwoVariables(5, 10)).toStrictEqual([10, 5]);
+    expect(swapTwoVariables(0, -2)).toStrictEqual([-2, 0]);
+    expect(swapTwoVariables(-18, -10)).toStrictEqual([-10, -18]);
   });
 });

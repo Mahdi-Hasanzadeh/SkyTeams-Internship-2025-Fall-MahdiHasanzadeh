@@ -15,5 +15,5 @@
 export function swapTwoVariables(a, b) {
   [a, b] = [b, a];
 
-  return `a = ${a}, b = ${b}`;
+  return [a, b];
 }
