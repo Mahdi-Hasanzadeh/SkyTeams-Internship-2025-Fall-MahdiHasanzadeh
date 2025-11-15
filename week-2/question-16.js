@@ -26,5 +26,3 @@ export function printNumbersSequentially(start, end) {
 
   return numbers.join(", ");
 }
-
-console.log(printNumbersSequentially(1, 100));
