@@ -21,7 +21,7 @@ export function isPrime(value) {
     throw new Error("provide number only");
   }
 
-  if (value === 0 || value === 1) {
+  if (value <= 0 || value === 1) {
     return false;
   }
 
